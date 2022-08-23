@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DscE+95bsKtxTjYCUt9VgdlbQZyIhXJLrp4qXKxGDcfFlx/jLVIq5Glc3slZCWYS5JmRJ70raB5TKSwKLWH6HA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Keenan\\OneDrive\\Documents\\web-projects\\neato-cabinetry\\Api\\Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Keenan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Keenan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Keenan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Keenan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Keenan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Keenan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
