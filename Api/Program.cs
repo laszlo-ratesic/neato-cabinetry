@@ -1,9 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// We must add the DbContext to the dependency injection container to be usable in our app
+// Uses a special extension method called AddDbContext
+// This will register it using the "scoped" scope, meaning a new instance will be created for each request that the API receives
+builder.Services.AddDbContext<ProjectDbContext>(o =>
+    // For that reason we turn off query tracking to improve performance
+    o.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
 var app = builder.Build();
 
