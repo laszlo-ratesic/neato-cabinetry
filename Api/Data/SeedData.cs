@@ -4,6 +4,8 @@ public static class SeedData
 {
     public static void Seed(ModelBuilder builder)
     {
+        // HasData method will check if the data is already in the db
+        // if not, it will create it. NOT directly, but via migration
         builder.Entity<ProjectEntity>().HasData(new List<ProjectEntity> {
             new ProjectEntity {
                 Id = 1,
