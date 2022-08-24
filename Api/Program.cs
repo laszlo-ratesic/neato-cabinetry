@@ -27,10 +27,9 @@ app.UseHttpsRedirection();
 // Access db by adding to lambda params bc it is registered
 // in the dep. injection container (which will provide us an instance)
 app.MapGet("/projects", (ProjectDbContext dbContext) =>
-    // all that's left is to return all project entities
-    // We can do this by simply accessing the Projects property,
-    // which is a collection of Project entities that will now be
-    // automatically serialized to JSON format
-    dbContext.Projects);
+    // all that's left is to return all project entities by accessing the Projects property
+    // which is a collection of Project entities that will now be automatically serialized to JSON format
+    // We use the LINQ Select method to project the entities into the DTOs
+    dbContext.Projects.Select(p => new ProjectDTO(p.Id, p.Address, p.Country, p.Budget)));
 
 app.Run();
