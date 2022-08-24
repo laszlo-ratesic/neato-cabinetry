@@ -23,4 +23,8 @@ public class ProjectDbContext: DbContext
         // Configuring the DbContext to use a SQLite database.
         optionsBuilder.UseSqlite($"Data Source={Path.Join(path, "projects.db")}");
     }
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        SeedData.Seed(builder);
+    }
 }
