@@ -13,6 +13,9 @@ builder.Services.AddDbContext<ProjectDbContext>(o =>
     // For that reason we turn off query tracking to improve performance
     o.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
+// Register ProjectRepository in the dep. injection container using its interface
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
