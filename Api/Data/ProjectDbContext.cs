@@ -28,3 +28,5 @@ public class ProjectDbContext: DbContext
         SeedData.Seed(builder);
     }
 }
+
+// TODO: Instruct DB how to be created
