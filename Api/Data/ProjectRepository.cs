@@ -1,6 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 
-public class ProjectRepository
+// We create an interface here alongside the implementation
+// Usually a good idea to separate eventually
+
+// Interface has method
+public interface IProjectRepository
+{
+    Task<List<ProjectDTO>> GetAll();
+}
+
+// Class implements interface
+public class ProjectRepository: IProjectRepository
 {
     private readonly ProjectDbContext context;
 
