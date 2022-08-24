@@ -2,6 +2,11 @@ using Microsoft.EntityFrameworkCore;
 
 public class ProjectDbContext: DbContext
 {
+    // The constructor takes a DbContextOptions class of ProjectDbContext as a parameter
+    public ProjectDbContext(DbContextOptions<ProjectDbContext> o):
+    // All we have to do is pass it on to the base constructor
+        base(o) {}
+
     // The DbSet collection represents the db table itself
     // which will have all the columns defined in the entity
     // We also set the intial value to an empty DbSet using the Set Method
