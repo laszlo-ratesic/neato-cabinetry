@@ -25,6 +25,6 @@ public class ProjectRepository: IProjectRepository
     {
         // and the accessing of the Projects DbSet and the projection to DTOs goes here
         // We use ToListAsync to create the generic list which we await
-        return await context.Projects.Select(p => new ProjectDTO(p.Id, p.Address, p.Country, p.Budget)).ToListAsync();
+        return await context.Projects.Select(p => new ProjectDTO(p.Id, p.Address, p.Country, p.Description, p.Budget)).ToListAsync();
     }
 }
